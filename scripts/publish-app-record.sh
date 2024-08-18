@@ -23,7 +23,7 @@ services:
   registry:
     rpcEndpoint: '${CERC_REGISTRY_REST_ENDPOINT:-http://ntn-daemon.laconix.xyz:26657}'
     gqlEndpoint: '${CERC_REGISTRY_GQL_ENDPOINT:-http://ntn-daemon.laconix.xyz:9473/api}'
-    chainId: ${CERC_REGISTRY_CHAIN_ID:-lorotestnet-1}
+    chainId: ${CERC_REGISTRY_CHAIN_ID:-laconic_9000-1}
     gas: 9550000
     fees: 15000000alnt
 EOF
