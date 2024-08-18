@@ -25,7 +25,7 @@ services:
     gqlEndpoint: '${CERC_REGISTRY_GQL_ENDPOINT:-http://ntn-daemon.laconix.xyz:9473/api}'
     chainId: ${CERC_REGISTRY_CHAIN_ID:-lorotestnet-1}
     gas: 9550000
-    fees: 500000alnt
+    fees: 15000000alnt
 EOF
 
 if [ -z "$CERC_REGISTRY_BOND_ID" ]; then
