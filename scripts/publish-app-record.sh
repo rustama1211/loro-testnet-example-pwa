@@ -21,11 +21,11 @@ rcd_app_version=$(jq -r '.version' package.json | sed 's/null//')
 cat <<EOF > "$CONFIG_FILE"
 services:
   registry:
-    rpcEndpoint: '${CERC_REGISTRY_REST_ENDPOINT:-https://laconicd.laconic.com}'
-    gqlEndpoint: '${CERC_REGISTRY_GQL_ENDPOINT:-https://laconicd.laconic.com/api}'
-    chainId: ${CERC_REGISTRY_CHAIN_ID:-laconic_9000-1}
+    rpcEndpoint: '${CERC_REGISTRY_REST_ENDPOINT:-http://ntn-daemon.laconix.xyz:26657}'
+    gqlEndpoint: '${CERC_REGISTRY_GQL_ENDPOINT:-http://ntn-daemon.laconix.xyz:9473/api}'
+    chainId: ${CERC_REGISTRY_CHAIN_ID:-lorotestnet-1}
     gas: 9550000
-    fees: 15000000alnt
+    fees: 500000alnt
 EOF
 
 if [ -z "$CERC_REGISTRY_BOND_ID" ]; then
